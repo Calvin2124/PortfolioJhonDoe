@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --openSans: "Open Sans", sans-serif;
+    --raleway: "Raleway", sans-serif;
+    --red:#E7174A;
+    --orange: #FF9A16;
+    --bleuFonce: #011826;
+    --vertClair: #2CC1AA;
+    --bgc: #011826;
+    --white: #fff;
+    --black: #000;
+    --borderBtn: #F7FFF2;
+}
+
+*{
+    margin: 0;
+    color: var(--white);
+}
+
+body{
+    background-color: var(--bgc);
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3{
+    font-family: var(--raleway);
+    font-weight: 700;
+}
+
+.buttonOrange{
+    background-color: var(--orange);
+    padding: 15px 25px;
+    border: 1px solid var(--orange);
+}
+
+.buttonBleuFonce{
+    background-color: var(--bleuFonce);
+    padding: 15px 25px;
+    border: 1px solid var(--borderBtn);
+}
+
+p{
+    font-family: var(--openSans);
+    font-weight: 400;
+    font-size: 18px;
+}
