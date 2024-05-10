@@ -25,10 +25,17 @@ body{
 
 ul{
     list-style-type: none;
+    padding-left: 0;
 }
 
 a{
     text-decoration: none;
+}
+
+.container1440{
+    padding: 0 15px;
+    max-width: 1440px;
+    margin: auto;
 }
 
 h1, h2, h3{
@@ -40,6 +47,7 @@ h1, h2, h3{
     background-color: var(--orange);
     padding: 15px 25px;
     border: 1px solid var(--orange);
+    color: var(--white);
 }
 
 .buttonBleuFonce{
@@ -52,4 +60,42 @@ p{
     font-family: var(--openSans);
     font-weight: 400;
     font-size: 18px;
+}
+
+
+/* HEADER  */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+nav{
+    display: flex;
+}
+
+nav ul{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+header nav li a{
+    font-size: 16px;
+    font-family: var(--openSans);
+    font-weight: 400;
+    color: var(--orange);
+}
+
+.liRed{
+    color: var(--red);
+}
+
+/* FOOTER */
+
+footer{
+    background-color: var(--vertClair);
+    text-align: center;
+    padding: 15px;
 }
