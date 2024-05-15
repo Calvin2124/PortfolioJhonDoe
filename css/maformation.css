@@ -402,3 +402,48 @@ footer{
     padding-left: 0px;
     margin-left: 20px;
 }
+
+.navAnimation li, h1, #menuFormation p, #description{
+    opacity: 0;
+    transform: scale(0); /* Initiallement, les éléments sont invisibles et de taille nulle */
+    animation: growIn 0.8s ease forwards;
+}
+
+@keyframes growIn {
+    0% {
+        opacity: 0;
+        transform: translateY(80px) scale(0); /* Commence à 50px vers le bas et taille nulle */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Se termine à la position initiale et à la taille normale */
+    }
+}
+
+.navAnimation li:nth-child(1) {
+    animation-delay: 0s;
+}
+.navAnimation li:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.navAnimation li:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.navAnimation li:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.navAnimation li:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.navAnimation li:nth-child(6) {
+    animation-delay: 0.5s;
+}
+h1{
+    animation-delay: 0.6s;
+}
+#menuFormation p{
+    animation-delay: 0.7s;
+}
+#description{
+    animation-delay: 0.8s;
+}
