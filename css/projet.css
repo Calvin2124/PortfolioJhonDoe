@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --openSans: "Open Sans", sans-serif;
+    --raleway: "Raleway", sans-serif;
+    --red:#E7174A;
+    --orange: #FF9A16;
+    --bleuFonce: #011826;
+    --vertClair: #2CC1AA;
+    --bgc: #011826;
+    --white: #fff;
+    --black: #000;
+    --borderBtn: #F7FFF2;
+    --gradient : linear-gradient(90deg, rgba(231,23,74,1) 17%, rgba(255,154,22,1) 72%);
+}
+
+*{
+    margin: 0;
+    color: var(--white);
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--bgc);
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container1440{
+    padding: 0 15px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+h1, h2, h3{
+    font-family: var(--raleway);
+    font-weight: 700;
+}
+
+.burgerMenu{
+    display: none !important;
+}
+
+.buttonOrange{
+    background-color: var(--orange);
+    padding: 15px 25px;
+    border: 1px solid var(--orange);
+    color: var(--white);
+    transition: all 0.2s;
+    font-family: var(--openSans);
+}
+
+.buttonOrange:hover{
+    background-color: var(--red);
+    transition: all 0.2s;
+}
+
+.buttonBleuFonce{
+    background-color: var(--bleuFonce);
+    padding: 15px 25px;
+    border: 1px solid var(--borderBtn);
+    transition: all 0.2s;
+    font-family: var(--openSans);
+}
+
+.buttonBleuFonce:hover{
+    background-color: var(--red);
+    transition: all 0.2s;
+}
+
+p{
+    font-family: var(--openSans);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* HEADER  */
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 70px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+header nav li a{
+    font-size: 16px;
+    font-family: var(--openSans);
+    font-weight: 400;
+    color: var(--orange);
+    transition: all 0.2s;
+}
+
+header nav li a:hover{
+    transition: all 0.2s;
+    color: var(--red);
+}
+
+header nav .buttonOrange:hover{
+    color: var(--white);
+    transition: all 0.2s;
+}
+
+.liRed{
+    color: var(--red);
+}
+
+/* FOOTER */
+
+footer{
+    background-color: var(--vertClair);
+    text-align: center;
+    padding: 15px;
+}
+
+/* MODAL */
+
+#liModal{
+    position: relative;
+}
+
+#toggleModal{
+    display: none;
+}
+
+#shadowModal{
+    display: none;
+    position: relative;
+    padding: 30px 10px;
+    background-color: rgba(0, 0, 0, 0.300);
+}
+
+.modal{
+    background-color: var(--borderBtn);
+    padding: 20px;
+}
+.modal h2{
+    color: var(--black);
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal form label{
+    color: var(--black);
+    font-size: 18px;
+}
+
+.modal form input{
+    outline: none;
+    padding: 5px;
+    color: var(--black);
+}
+
+#closeModal{
+    color: var(--orange);
+    font-size: 30px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+#closeModal:hover{
+    color: var(--red);
+}
+
+#toggleModal:checked + #shadowModal{
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 9999;
+}
+
+
+#competence{
+    margin-bottom: 100px;
+}
+
+#competence h2{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+#compList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#compList li{
+    padding: 20px 0 20px 20px;
+    background-color: var(--borderBtn);
+    flex-basis: 47%; 
+    margin-bottom: 10px; 
+}
+
+#compList label{
+    color: var(--orange);
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--red);
+    width: fit-content;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+#subFront > li, #subBack > li{
+    padding: 0;
+    list-style-type: square !important;
+}
+
+#subFront > li.liSubFramework, #subBack > li.liSubFramework{
+    padding-top: 20px;
+}
+
+/* SECTION TITLE 1 */
+#menuFormation{
+    background-color: var(--red);
+    padding: 90px 0px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#menuFormation h1{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#menuFormation p{
+    font-size: 16px;
+}
+
+/* PROJET */
+
+#project{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#project h3{
+    font-size: 21px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+#project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#articleProject{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+#articleProject article > div{
+    position: relative;
+    padding: 20px 12px 0px;
+    margin-bottom: 40px;
+}
+
+#articleProject article > div::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1px; /* Pour que le pseudo-élément se chevauche avec la bordure gauche */
+    height: 100%;
+    width: 1px; /* Largeur de la bordure */
+    background: linear-gradient(180deg, rgba(231,23,74,1) 17%, rgba(255,154,22,1) 72%);
+}
+
+#articleProject article > div::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -1px; /* Pour que le pseudo-élément se chevauche avec la bordure gauche */
+    height: 100%;
+    width: 1px; /* Largeur de la bordure */
+    background: linear-gradient(180deg, rgba(231,23,74,1) 17%, rgba(255,154,22,1) 72%);
+}
+
+#project a{
+    margin-left: 20px;
+}
+
+#articleProject article{
+    position: relative;
+}
+
+#articleProject .front-end::before{
+    content: "Front-end";
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: var(--red);
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+}
+
+#articleProject .back-end::before{
+    content: "Back-end";
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: var(--red);
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+}
+
+#next{
+    margin: auto;
+    display: flex;
+    gap: 10px;
+}
+
+#next a:nth-child(1){
+    color: var(--red);
+}
+
+#next a{
+    margin: 0;
+    color: var(--orange);
+    font-size: 18px;
+}
+
+#next a:hover{
+    color: var(--red);
+    transition: all 0.2s;
+}
