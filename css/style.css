@@ -349,7 +349,7 @@ footer{
     background: linear-gradient(180deg, rgba(231,23,74,1) 17%, rgba(255,154,22,1) 72%);
 }
 
-#project a{
+#project .buttonBleuFonce{
     margin-left: 20px;
 }
 

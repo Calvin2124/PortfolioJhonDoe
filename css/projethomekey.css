@@ -258,35 +258,7 @@ footer{
     font-size: 16px;
 }
 
-/* SECTION DESCRIPTION */
-
-#description{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 60px;
-}
-
-#description img{
-    height: 680px;
-    width: 100%;
-}
-
-#descriptionParagraphe{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#descriptionParagraphe h2{
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-#descriptionParagraphe > p:nth-child(2){
-    margin-bottom: 20px;
-}
-
-/* SECTION PROJECT */
+/* PROJET */
 
 #project{
     margin-bottom: 50px;
@@ -294,16 +266,10 @@ footer{
     flex-direction: column;
 }
 
-#project h2{
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
 #project h3{
     font-size: 21px;
     margin-bottom: 20px;
     letter-spacing: 1px;
-
 }
 
 #project img {
@@ -346,6 +312,10 @@ footer{
     background: linear-gradient(180deg, rgba(231,23,74,1) 17%, rgba(255,154,22,1) 72%);
 }
 
+#project a{
+    margin-left: 20px;
+}
+
 #articleProject article{
     position: relative;
 }
@@ -373,32 +343,24 @@ footer{
     font-weight: bold;
     z-index: 1;
 }
-#project > a{
+
+#next{
     margin: auto;
+    display: flex;
+    gap: 10px;
 }
 
-
-/* SUBMENU */
-
-#toggleLangage, #toggleConception, #toggleFramework, #toggleService, #toggleBase, #toggleSecurite, #toggleOutil, #toggleAutre{
-    display: none;
+#next a:nth-child(1){
+    color: var(--red);
 }
 
-#subLangage, #subConception, #subFramework, #subService, #subBase, #subSecurite, #subOutil, #subAutre{
-    display: none;
-    overflow: hidden;
-    max-height: 0px;
+#next a{
+    margin: 0;
+    color: var(--orange);
+    font-size: 18px;
 }
 
-#toggleLangage:checked + #subLangage, #toggleConception:checked + #subConception, #toggleFramework:checked + #subFramework, #toggleService:checked + #subService, #toggleBase:checked + #subBase, #toggleSecurite:checked + #subSecurite, #toggleOutil:checked + #subOutil, #toggleAutre:checked + #subAutre{
-    display: block;
-    max-height: 400px;
-    
-}
-
-#subLangage li, #subConception li, #subFramework li, #subService li, #subBase li, #subSecurite li, #subOutil li, #subAutre li{
-    color: var(--black);
-    list-style-type: circle;
-    padding-left: 0px;
-    margin-left: 20px;
+#next a:hover{
+    color: var(--red);
+    transition: all 0.2s;
 }
