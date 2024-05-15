@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/maformation.css">
     <script src="https://kit.fontawesome.com/2bb90c57b5.js"></script>
-    <title>Jhon Doe portfolio</title>
+    <title>Ma formation</title>
 </head>
 <body>
     <header id="header" class="container1440">
@@ -13,9 +13,9 @@
         <nav>
             <a href="#"><i class="fa-solid fa-bars burgerMenu"></i></a>
             <ul class="navAnimation">
-                <li><a class="liRed" href="#">Acceuil</a></li>
-                <li><a href="#presentation">Qui suis-je ?</a></li>
-                <li><a href="#formation">Ma formation</a></li>
+                <li><a href="#">Acceuil</a></li>
+                <li><a href="index.html#presentation">Qui suis-je ?</a></li>
+                <li><a  class="liRed" href="index.html#formation">Ma formation</a></li>
                 <li><a href="#competence">Mes compétences</a></li>
                 <li><a href="#project">Mes projets</a></li>
                 <li id="liModal">
@@ -41,64 +41,20 @@
         </nav>
     </header>
     <main>
-        <section id="presentation" class="container1440">
-            <div id="contentPresentation">
-                <h1>John Doe - Développeur web et web mobile</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores</p>
-                <p>molestiae adipisci nulla saepe, ipsa earum, corrupti necessitatibus libero ut nobis sed magni facere blanditiis assumenda. Enim vero perspiciatis beatae animi!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias</p>
-                <p>temporibus corrupti blanditiis aliquid, quod a expedita eligendi soluta libero voluptate sit, maiores consequatur minus perspiciatis perferendis porro? Consectetur, laborum quo!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias</p>
-                <p>temporibus corrupti blanditiis aliquid, quod a expedita eligendi soluta libero voluptate sit, maiores consequatur minus perspiciatis perferendis porro? Consectetur, laborum quo!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias</p>
-                <p>temporibus corrupti blanditiis aliquid, quod a expedita eligendi soluta libero voluptate sit, maiores consequatur minus perspiciatis perferendis porro? Consectetur, laborum quo!</p>
-                <label id="labelModal" for="modalContact" class="buttonOrange">Contactez moi</label>
-                <input type="checkbox" name="modalContact" id="modalContact">
-                <div id="modalPresentation">
-                    <label id="closeModal" for="modalContact">X</label>
-                    <div class="modal">
-                        <h2>Me contacter</h2>
-                        <form action="#">
-                            <label for="userName">Votre nom:</label>
-                            <input type="text" name="userName" id="userName" placeholder="Votre nom" required>
-                            <label for="userMail">Votre mail:</label>
-                            <input type="email" name="userMail" id="userMail" placeholder="Votre mail" required>
-                            <label for="userMessage">Votre message:</label>
-                            <textarea name="userMessage" id="userMessage" cols="30" rows="3" placeholder="Votre message"></textarea>
-                            <button class="buttonBleuFonce">Envoyer la demande</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <img src="img/moi.png" alt="Photo de Jhon Doe">
+        <section id="menuFormation">
+            <h1>Formation à la carte</h1>
+            <p>4 mois de formation de découverte des métiers du développement</p>
         </section>
-        <section id="formation" class="container1440">
-            <h2>Ma formation</h2>
-            <article id="articleFormation">
-                <img src="img/dev-a-la-carte.png" alt="Interface ligne de code">
-                <div id="formatDescription">
-                    <h3>Formation développement à la carte</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <p>adipisicing elit. Reiciendis sint quam quo eveniet placeat distinctio recusandae nihil praesentium fugiat natus, ducimus assumenda! Blanditiis, fugit laboriosam? Libero sunt explicabo facilis laboriosam?</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <p>adipisicing elit. Recusandae cum nihil placeat cupiditate tempore vel, labore eos tenetur qui provident blanditiis commodi magni animi at dicta dolore! Tempora, magni consequatur?</p>
-                    <a href="maformation.html" class="buttonBleuFonce">En savoir plus</a>
-                </div>
-            </article>
-            <article id="articleFormation2">
-                <div id="formatDescription2">
-                    <h3>Formation développement à la carte</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <p>adipisicing elit. Reiciendis sint quam quo eveniet placeat distinctio recusandae nihil praesentium fugiat natus, ducimus assumenda! Blanditiis, fugit laboriosam? Libero sunt explicabo facilis laboriosam?</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <p>adipisicing elit. Recusandae cum nihil placeat cupiditate tempore vel, labore eos tenetur qui provident blanditiis commodi magni animi at dicta dolore! Tempora, magni consequatur?</p>
-                    <a href="maformation.html" class="buttonBleuFonce">En savoir plus</a>
-                </div>
-                <img src="img/dwwm.png" alt="Interface ligne de code">
-            </article>
+        <section id="description" class="container1440">
+            <div id="descriptionParagraphe">
+                <h2>Description de la formation</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum totam quas molestias</p>
+                <p>doloribus dolore! Neque nulla blanditiis, suscipit voluptates vero quia qui tempora minima corporis quibusdam dolor eligendi fugit expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam praesentium blanditiis aliquam beatae eius pariatur cupiditate sapiente facere eveniet harum ducimus, vel ab numquam? Perspiciatis tenetur animi temporibus cumque molestias.</p>
+            </div>
+            <img src="img/dev-a-la-carte.png" alt="">
         </section>
         <section id="competence" class="container1440">
-            <h2>Mes compétences</h2>
+            <h2>Les compétences développés</h2>
             <ul id="compList">
                 <li>
                     <label for="toggleLangage">Langages de programmation</label>
@@ -194,10 +150,7 @@
             </ul>
         </section>
         <section id="project" class="container1440">
-            <div id="projectTitle">
-                <h2>Mes projets</h2>
-                <a href="#" class="buttonBleuFonce">Voir tous les projets</a>
-            </div>
+            <h2>Les projets réalisés </h2>
             <div id="articleProject">
                 <article class="front-end">
                     <div>
@@ -224,6 +177,7 @@
                     <a href="#" class="buttonBleuFonce">Lire la suite</a>
                 </article>
             </div>
+            <a href="#" class="buttonBleuFonce">Voir plus de projets</a>
         </section>
     </main>
     <footer>

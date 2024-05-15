@@ -82,7 +82,6 @@ p{
     font-size: 18px;
 }
 
-
 /* HEADER  */
 
 #header{
@@ -156,6 +155,7 @@ footer{
 
 #presentation img{
     width: 100%;
+    z-index: -1;
 }
 
 #presentation p{
@@ -468,7 +468,7 @@ footer{
     position: absolute;
     top: 50px;
     right: 50px;
-    z-index: 1;
+    z-index: 9999;
 }
 
 #modalContact:checked + #modalPresentation{
