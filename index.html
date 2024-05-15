@@ -11,13 +11,32 @@
     <header id="header" class="container1440">
         <img src="img/Link.png" alt="Logo du site">
         <nav>
-            <ul>
+            <a href="#"><i class="fa-solid fa-bars burgerMenu"></i></a>
+            <ul class="navAnimation">
                 <li><a class="liRed" href="#">Acceuil</a></li>
                 <li><a href="#">Qui suis-je ?</a></li>
                 <li><a href="#">Ma formation</a></li>
                 <li><a href="#">Mes compétences</a></li>
                 <li><a href="#">Mes projets</a></li>
-                <li><a class="buttonOrange" href="#">Contactez-moi</a></li>
+                <li id="liModal">
+                    <label for="toggleModal" class="buttonOrange">Contactez-moi</label>
+                    <input type="checkbox" name="modal" id="toggleModal">
+                    <div id="shadowModal">
+                        <label id="closeModal" for="toggleModal">X</label>
+                        <div class="modal">
+                            <h2>Me contacter</h2>
+                            <form action="#">
+                                <label for="userName">Votre nom:</label>
+                                <input type="text" name="userName" id="userName" placeholder="Votre nom" required>
+                                <label for="userMail">Votre mail:</label>
+                                <input type="email" name="userMail" id="userMail" placeholder="Votre mail" required>
+                                <label for="userMessage">Votre message:</label>
+                                <textarea name="userMessage" id="userMessage" cols="30" rows="3" placeholder="Votre message"></textarea>
+                                <button class="buttonBleuFonce">Envoyer la demande</button>
+                            </form>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -33,7 +52,23 @@
                 <p>temporibus corrupti blanditiis aliquid, quod a expedita eligendi soluta libero voluptate sit, maiores consequatur minus perspiciatis perferendis porro? Consectetur, laborum quo!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias</p>
                 <p>temporibus corrupti blanditiis aliquid, quod a expedita eligendi soluta libero voluptate sit, maiores consequatur minus perspiciatis perferendis porro? Consectetur, laborum quo!</p>
-                <a href="#" class="buttonOrange">Contactez-moi</a>
+                <label id="labelModal" for="modalContact" class="buttonOrange">Contactez moi</label>
+                <input type="checkbox" name="modalContact" id="modalContact">
+                <div id="modalPresentation">
+                    <label id="closeModal" for="modalContact">X</label>
+                    <div class="modal">
+                        <h2>Me contacter</h2>
+                        <form action="#">
+                            <label for="userName">Votre nom:</label>
+                            <input type="text" name="userName" id="userName" placeholder="Votre nom" required>
+                            <label for="userMail">Votre mail:</label>
+                            <input type="email" name="userMail" id="userMail" placeholder="Votre mail" required>
+                            <label for="userMessage">Votre message:</label>
+                            <textarea name="userMessage" id="userMessage" cols="30" rows="3" placeholder="Votre message"></textarea>
+                            <button class="buttonBleuFonce">Envoyer la demande</button>
+                        </form>
+                    </div>
+                </div>
             </div>
             <img src="img/moi.png" alt="Photo de Jhon Doe">
         </section>
@@ -108,11 +143,54 @@
                         </li>
                     </ul>
                 </li>
-                <li><p>Services Web</p></li>
-                <li><p>Bases de données</p></li>
-                <li><p>Sécurité</p></li>
-                <li><p>Outils de développement</p></li>
-                <li><p>Autres compétences</p></li>
+                <li>
+                    <label for="toggleService">Services Web</label>
+                    <input type="checkbox" id="toggleService">
+                    <ul id="subService">
+                        <li>APIs Rest</li>
+                        <li>GraphQL</li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="toggleBase">Bases de données</label>
+                    <input type="checkbox" id="toggleBase">
+                    <ul id="subBase">
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>SQLite</li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="toggleSecurite">Sécurité</label>
+                    <input type="checkbox" id="toggleSecurite">
+                    <ul id="subSecurite">
+                        <li>Principes de sécurité web (OWASP)</li>
+                        <li>Gestion des sessions et des cookies</li>
+                        <li>Authentification et autorisation</li>
+                        <li>SSL/TLS</li>
+                    </ul>
+                </li>
+                <li><p></p>
+                    <label for="toggleOutil">Outils de développement</label>
+                    <input type="checkbox" id="toggleOutil">
+                    <ul id="subOutil">
+                        <li>Git et Github</li>
+                        <li>Babel</li>
+                        <li>Visual Studio Code</li>
+                    </ul>
+                </li>
+                <li><p></p>
+                    <label for="toggleAutre">Autres compétences</label>
+                    <input type="checkbox" id="toggleAutre">
+                    <ul id="subAutre">
+                        <li>Testing et débogage</li>
+                        <li>Performances et optimisations</li>
+                        <li>SEO (Search Engine Optimisation)</li>
+                        <li>Accessibilité Web (WCAG)</li>
+                        <li>Gestion de projet et collaboration en équipe</li>
+                        <li>Veille technologique et apprentissag continu</li>
+                    </ul>
+                </li>
             </ul>
         </section>
         <section id="project" class="container1440">

@@ -44,6 +44,10 @@ h1, h2, h3{
     font-weight: 700;
 }
 
+.burgerMenu{
+    display: none !important;
+}
+
 .buttonOrange{
     background-color: var(--orange);
     padding: 15px 25px;
@@ -89,6 +93,7 @@ p{
 
 nav{
     display: flex;
+    align-items: center;
 }
 
 nav ul{
@@ -134,7 +139,7 @@ footer{
 #presentation{
     display: grid;
     grid-template-columns: 50% 50%;
-    margin-bottom: 60px;
+    margin-bottom: 60px;position: relative;
 }
 
 #presentation h1{
@@ -250,14 +255,16 @@ footer{
 }
 
 #compList{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 20px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #compList li{
     padding: 20px 0 20px 20px;
     background-color: var(--borderBtn);
+    flex-basis: 47%; 
+    margin-bottom: 10px; 
 }
 
 #compList label{
@@ -292,6 +299,7 @@ footer{
 #project h3{
     font-size: 21px;
     margin-bottom: 20px;
+    letter-spacing: 1px;
 
 }
 
@@ -374,21 +382,233 @@ footer{
 
 /* SUBMENU */
 
-#toggleLangage, #toggleConception, #toggleFramework{
+#toggleLangage, #toggleConception, #toggleFramework, #toggleService, #toggleBase, #toggleSecurite, #toggleOutil, #toggleAutre{
     display: none;
 }
 
-#subLangage, #subConception, #subFramework{
+#subLangage, #subConception, #subFramework, #subService, #subBase, #subSecurite, #subOutil, #subAutre{
     display: none;
+    overflow: hidden;
+    max-height: 0px;
 }
 
-#toggleLangage:checked + #subLangage, #toggleConception:checked + #subConception, #toggleFramework:checked + #subFramework{
+#toggleLangage:checked + #subLangage, #toggleConception:checked + #subConception, #toggleFramework:checked + #subFramework, #toggleService:checked + #subService, #toggleBase:checked + #subBase, #toggleSecurite:checked + #subSecurite, #toggleOutil:checked + #subOutil, #toggleAutre:checked + #subAutre{
     display: block;
+    max-height: 400px;
+    
 }
 
-#subLangage li, #subConception li, #subFramework li{
+#subLangage li, #subConception li, #subFramework li, #subService li, #subBase li, #subSecurite li, #subOutil li, #subAutre li{
     color: var(--black);
     list-style-type: circle;
     padding-left: 0px;
     margin-left: 20px;
+}
+
+/* MODAL */
+
+#liModal, #labelModal{
+    position: relative;
+}
+
+#toggleModal, #modalContact{
+    display: none;
+}
+
+#shadowModal, #modalPresentation{
+    display: none;
+    position: relative;
+    padding: 30px 10px;
+    background-color: rgba(0, 0, 0, 0.300);
+}
+
+.modal{
+    background-color: var(--borderBtn);
+    padding: 20px;
+}
+.modal h2{
+    color: var(--black);
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal form label{
+    color: var(--black);
+    font-size: 18px;
+}
+
+.modal form input{
+    outline: none;
+    padding: 5px;
+    color: var(--black);
+}
+
+#closeModal{
+    color: var(--orange);
+    font-size: 30px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+#closeModal:hover{
+    color: var(--red);
+}
+
+#toggleModal:checked + #shadowModal{
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 1;
+}
+
+#modalContact:checked + #modalPresentation{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 25%;
+}
+
+#modalPresentation form label{
+    background: var(--orange);
+    padding: 10px;
+}
+
+#modalPresentation form label:hover{
+    background-color: var(--red);
+    transition: all 0.2s;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width:1439px){
+    #presentation{
+        grid-template-columns: 1fr;
+    }
+    #contentPresentation{
+        max-width: fit-content;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    header nav ul{
+        display: none;
+    }
+    .burgerMenu{
+        display: block !important;
+    }
+    #formation h2{
+        margin-bottom: 60px;
+    }
+    #articleFormation img, #articleFormation2 img{
+        height: 516px;
+        width: 516px;
+        margin: auto;
+    }
+    #formatDescription{
+        height: 500px;
+    }
+    #articleFormation{
+        margin-bottom: 120px;
+    }
+    #formatDescription2{
+        height: 500px;
+    }
+    #articleFormation2{
+        margin-bottom: 120px;
+    }
+    #articleProject{
+        grid-template-columns: 1fr 1fr;
+    }
+    .back-end{
+        grid-column: 1/3;
+    }
+}
+@media screen and (max-width:767px){
+    #articleFormation, #articleFormation2{
+        grid-template-columns: 1fr;
+    }
+    #formatDescription, #formatDescription2{
+        position: relative;
+        margin: auto;
+    }
+    #articleFormation img, #articleFormation2 img{
+        height: 100%;
+        width: 100%;
+    }
+    #articleFormation2 img{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #compList{
+        display: block;
+    }
+    #articleProject{
+        grid-template-columns: 1fr;
+    }
+    .back-end{
+        grid-column: 1;
+    }
+    #projectTitle{
+        flex-direction: column;
+    }
+    #project h2{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #project a{
+        margin: auto;
+    }
+}
+
+.navAnimation li, #contentPresentation, #presentation img{
+    opacity: 0;
+    transform: scale(0); /* Initiallement, les éléments sont invisibles et de taille nulle */
+    animation: growIn 0.7s ease forwards;
+}
+
+@keyframes growIn {
+    0% {
+        opacity: 0;
+        transform: translateY(80px) scale(0); /* Commence à 50px vers le bas et taille nulle */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Se termine à la position initiale et à la taille normale */
+    }
+}
+
+.navAnimation li:nth-child(1) {
+    animation-delay: 0s;
+}
+.navAnimation li:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.navAnimation li:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.navAnimation li:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.navAnimation li:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.navAnimation li:nth-child(6) {
+    animation-delay: 0.5s;
+}
+#contentPresentation{
+    animation-delay: 0.6s;
+}
+#presentation img{
+    animation-delay: 0.7s;
 }
