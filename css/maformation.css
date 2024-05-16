@@ -210,8 +210,11 @@ footer{
 
 #compList{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 20px;
+}
+
+#compList div {
+    width: 100%;
 }
 
 #compList li{
@@ -385,15 +388,13 @@ footer{
 }
 
 #subLangage, #subConception, #subFramework, #subService, #subBase, #subSecurite, #subOutil, #subAutre{
-    display: none;
+    max-height: 0;
     overflow: hidden;
-    max-height: 0px;
+    transition: max-height 0.3s ease-in-out;
 }
 
 #toggleLangage:checked + #subLangage, #toggleConception:checked + #subConception, #toggleFramework:checked + #subFramework, #toggleService:checked + #subService, #toggleBase:checked + #subBase, #toggleSecurite:checked + #subSecurite, #toggleOutil:checked + #subOutil, #toggleAutre:checked + #subAutre{
-    display: block;
     max-height: 400px;
-    
 }
 
 #subLangage li, #subConception li, #subFramework li, #subService li, #subBase li, #subSecurite li, #subOutil li, #subAutre li{
