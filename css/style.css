@@ -28,6 +28,7 @@ body{
 ul{
     list-style-type: none;
     padding-left: 0;
+    font-family: var(--openSans);
 }
 
 a{
@@ -450,7 +451,7 @@ footer{
     color: var(--black);
 }
 
-#closeModal{
+#closeModal, #closeModal2{
     color: var(--orange);
     font-size: 30px;
     position: absolute;
